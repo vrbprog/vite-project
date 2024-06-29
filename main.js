@@ -1,8 +1,6 @@
-import './style.css'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = 
-`
-  <div class="container">
-    <h1>Hello Vite!</h1>
-  </div>
-`
+import { MoneyKeeper } from "./moneyKeeper.js";
+
+const keeper = new MoneyKeeper();
+keeper.show();

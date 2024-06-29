@@ -54,3 +54,18 @@ ul {
     box-sizing: border-box;
     border-radius: 20px;
 }
+
+.balanse,
+.income-extensive-date,
+.calendar-block,
+.transaction,
+.adding-transaction {
+    background-color: #fff;
+    border-radius: inherit;
+    padding: inherit;
+}
+
+.balanse h1,
+h2 {
+    color: indigo;
+}
