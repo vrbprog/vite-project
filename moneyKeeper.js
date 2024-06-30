@@ -11,6 +11,9 @@ export class MoneyKeeper {
         this.#income_extensive_date = document.createElement("div");
         this.#income_extensive_date.classList.add("income-extensive-date");
 
+        this.#nav_date_calendar = document.createElement("div");
+        this.#nav_date_calendar.classList.add("nav-date-calendar");
+
         this.#user = new User(1403537);
     }
 
@@ -20,6 +23,7 @@ export class MoneyKeeper {
         this.#addButtonSelectDay();
         this.#addButtonSelectWeek();
         this.#addButtonSelectMonth();
+        this.#addNavDateCalendar();
     }
 
     language;
@@ -27,6 +31,8 @@ export class MoneyKeeper {
     #div_container_balanse;
     #div_balanse;
     #income_extensive_date;
+    #nav_date_calendar;
+
     #user;
 
     #btnSelectDay;
@@ -91,6 +97,30 @@ export class MoneyKeeper {
         this.#btnSelectMonth.classList.add("btn-select-date");
         this.#btnSelectMonth.innerHTML = "Month";
         this.#income_extensive_date.appendChild(this.#btnSelectMonth);
+    }
+
+    #addNavDateCalendar() {
+        this.#nav_date_calendar.innerHTML = `
+            <div class="nav-date">
+                <svg class="svg-icon">
+                    <use
+                        href="./public/symbol.svg#icon-previous-svgrepo-com"
+                    ></use>
+                </svg>
+                <p class="current-select-date">30 червня 2024</p>
+                <svg class="svg-icon">
+                    <use
+                        href="./public/symbol.svg#icon-next-svgrepo-com"
+                    ></use>
+                </svg>
+            </div>
+            <svg id="calendar" class="svg-icon calendar-icon">
+                <use
+                    href="./public/symbol.svg#icon-calendar-svgrepo-com"
+                ></use>
+            </svg>   
+        `;
+        this.#income_extensive_date.appendChild(this.#nav_date_calendar);
     }
 
     #checkLanguage(language) {
