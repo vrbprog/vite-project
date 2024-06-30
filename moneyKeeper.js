@@ -14,6 +14,15 @@ export class MoneyKeeper {
         this.#nav_date_calendar = document.createElement("div");
         this.#nav_date_calendar.classList.add("nav-date-calendar");
 
+        this.#nav_date_calendar = document.createElement("div");
+        this.#nav_date_calendar.classList.add("nav-date-calendar");
+
+        this.#gistogram_area = document.createElement("div");
+        this.#gistogram_area.classList.add("gistogram-area");
+
+        this.#show_gistogram_btn_block = document.createElement("div");
+        this.#show_gistogram_btn_block.classList.add("show-gistogram-btn");
+
         this.#user = new User(1403537);
     }
 
@@ -24,6 +33,8 @@ export class MoneyKeeper {
         this.#addButtonSelectWeek();
         this.#addButtonSelectMonth();
         this.#addNavDateCalendar();
+        this.#addGistogramArea();
+        this.#addShowGistogramButton();
     }
 
     language;
@@ -32,6 +43,8 @@ export class MoneyKeeper {
     #div_balanse;
     #income_extensive_date;
     #nav_date_calendar;
+    #gistogram_area;
+    #show_gistogram_btn_block;
 
     #user;
 
@@ -121,6 +134,31 @@ export class MoneyKeeper {
             </svg>   
         `;
         this.#income_extensive_date.appendChild(this.#nav_date_calendar);
+    }
+
+    #addGistogramArea() {
+        this.#div_container_balanse.appendChild(this.#gistogram_area);
+    }
+
+    #addShowGistogramButton() {
+        this.#show_gistogram_btn_block.innerHTML = `
+            <button id="add-prop" class="btn-prop-show">
+                <svg id="add-prop-icon" class="svg-icon-adding">
+                    <use
+                        href="./public/symbol.svg#icon-histogram-svgrepo-com"
+                    ></use>
+                </svg>
+            </button>
+
+            <button id="hide-prop" class="btn-prop-show display-none">
+                <svg class="svg-icon-adding">
+                    <use
+                        href="./public/symbol.svg#icon-up-arrow-svgrepo-com"
+                    ></use>
+                </svg>
+            </button>
+        `;
+        this.#gistogram_area.appendChild(this.#show_gistogram_btn_block);
     }
 
     #checkLanguage(language) {
