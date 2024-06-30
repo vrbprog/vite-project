@@ -62,10 +62,75 @@ ul {
 .adding-transaction {
     background-color: #fff;
     border-radius: inherit;
+    /* border: 1px solid rgb(199, 195, 202); */
     padding: inherit;
+}
+
+.income-extensive-date,
+.calendar-block {
+    margin-top: 20px;
 }
 
 .balanse h1,
 h2 {
     color: indigo;
+}
+
+.income-extensive {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.money {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.money.plus {
+    color: green;
+}
+
+.money.minus {
+    color: red;
+}
+
+.svg-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.btn-select-date {
+    display: inline-block;
+    font-size: 18px;
+    width: 74px;
+    height: 28px;
+    color: indigo;
+    background-color: #ffffff;
+    border-radius: 14px;
+    /* border: 1px solid indigo; */
+    border: none;
+}
+
+.btn-select-date:hover {
+    background-color: #e8a1fc;
+    cursor: pointer;
+}
+
+.btn-select-date.date-selected:hover {
+    background-color: #e8a1fc;
+    cursor: pointer;
+}
+
+.btn-select-date.date-selected {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.current-select-date {
+    display: inline-block;
+    font-size: 16px;
+    color: blueviolet;
 }
