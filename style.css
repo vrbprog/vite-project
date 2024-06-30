@@ -76,8 +76,13 @@ h2 {
     color: indigo;
 }
 
+.balanse h2 {
+    font-size: 32px;
+    display: inline-block;
+}
+
 .income-extensive {
-    padding-bottom: 20px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -102,6 +107,13 @@ h2 {
     height: 14px;
 }
 
+.balanse .svg-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    fill: indigo;
+}
+
 .btn-select-date {
     display: inline-block;
     font-size: 18px;
@@ -110,17 +122,18 @@ h2 {
     color: indigo;
     background-color: #ffffff;
     border-radius: 14px;
+    margin-left: 6px;
     /* border: 1px solid indigo; */
     border: none;
 }
 
 .btn-select-date:hover {
-    background-color: #e8a1fc;
+    background-color: #cea6d8;
     cursor: pointer;
 }
 
 .btn-select-date.date-selected:hover {
-    background-color: #e8a1fc;
+    background-color: #cea6d8;
     cursor: pointer;
 }
 

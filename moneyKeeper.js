@@ -36,8 +36,11 @@ export class MoneyKeeper {
     #addBalanseBlock(currentbalanse) {
         const header = ["Ваш баланс", "Your Balanse"];
         this.#div_balanse.innerHTML = `
-           <h2>${header[this.language]}</h2>
-           <h1>${currentbalanse}</h1>
+           <h1>${header[this.language]}</h1>
+           <h2>${currentbalanse}</h2>
+           <svg class="svg-icon">
+                <use href="./public/symbol.svg#icon-ukraine-hryvna-svgrepo-com"></use>
+            </svg>
         `;
         this.#div_container_balanse.appendChild(this.#div_balanse);
         document.querySelector("#app").appendChild(this.#div_container_balanse);
@@ -47,7 +50,7 @@ export class MoneyKeeper {
         this.#income_extensive_date.innerHTML = `
         <div class="income-extensive">
             <div>
-                <h4>Income</h4>
+                <h3>Income</h3>
                 <p id="money-plus" class="money plus">
                     +10 000
                 </p>
@@ -56,7 +59,7 @@ export class MoneyKeeper {
                 </svg>
             </div>
             <div>
-                <h4>Expense</h4>
+                <h3>Expense</h3>
                 <p id="money-minus" class="money minus">
                     -2 390
                 </p>
